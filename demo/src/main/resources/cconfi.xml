@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    this configuration file is to inject collection type objects i.e. list, set, map, properties-->
+    <bean  class = "spring.demo.collections.Employee " name = "emp1" >
+        <property name="name" value = "abcd"/>
+        <property name="contacts">
+            <list>
+                <value>2234355</value>
+                <value>755355</value>
+                <value>987654</value>
+
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>delhi</value>
+                <value>mumbai</value>
+                <value>pune</value>
+
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value="2months"/>
+                <entry key="spring" value="1months"/>
+                <entry key="python" value="2months"/>
+
+            </map>
+        </property>
+    </bean>
+
+</beans>
